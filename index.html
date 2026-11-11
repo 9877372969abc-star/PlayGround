@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Down hill decsenders</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='24' fill='%230b1c2c'/%3E%3Cpath d='M20 92c16-18 30-28 45-31 10-2 20 1 27 9l15 14 8-9-18-21c-7-9-15-14-26-14-22 0-40 15-59 38z' fill='%236ad2ff'/%3E%3Cpath d='M57 27h18v30H57zM30 87h42v10H30zM80 84h22v13H80z' fill='%23d7f0ff'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Down hill decsenders game"></canvas>
+
+      <div id="hud">
+        <div class="hud-left">
+          <div class="title">Down hill decsenders</div>
+          <div id="status">Ready for the drop</div>
+        </div>
+
+        <div class="hud-right">
+          <div>Distance <span id="distanceValue">0 m</span></div>
+          <div>Speed <span id="speedValue">0 km/h</span></div>
+          <div>Score <span id="scoreValue">0</span></div>
+          <div>Health <span id="healthValue">3</span></div>
+        </div>
+      </div>
+
+      <div id="overlay" class="visible">
+        <div class="panel">
+          <h1>Down hill<br />decsenders</h1>
+          <p>Steer with A/D or the arrow keys, jump with Space, dodge rocks, and collect glowing pickups.</p>
+          <p class="small">Reach the 2600m finish with at least one heart left. Press Enter to start.</p>
+          <button id="startButton" type="button">Start Ride</button>
+        </div>
+      </div>
+
+      <div id="touchControls" aria-label="Touch controls">
+        <button class="touch-button" data-control="left" aria-label="Move left">◀</button>
+        <button class="touch-button" data-control="jump" aria-label="Jump">▲</button>
+        <button class="touch-button" data-control="right" aria-label="Move right">▶</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
